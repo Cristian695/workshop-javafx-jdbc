@@ -87,7 +87,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 			DepartmentFormController controller = loader.getController();
 			controller.setDeapartment(obj);
 			controller.setDepartmentService(new DepartmentService());
-			controller.subscribeDataChangeListener(this);
+			controller.subscribeDataChangeListener(this );
 			controller.updateFormData();
 			
 			Stage dialogStage = new Stage();
@@ -105,6 +105,6 @@ public class DepartmentListController implements Initializable, DataChangeListen
 
 	@Override
 	public void onDataChange() {
-		updateTableView();		
+		updateTableView();
 	}
 }
